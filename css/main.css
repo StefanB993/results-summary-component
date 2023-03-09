@@ -1,0 +1,216 @@
+:root {
+  --ff-sans: "Hanken Grotesk", sans-serif;
+  --ff-serif: "Playfair Display", serif;
+  --fs-100: 1.125rem;
+  --fs-200: 1.5rem;
+  --fs-300: 2rem;
+  --fs-400: 4.5rem;
+  --fw-100: 500;
+  --fw-200: 700;
+  --fw-300: 800;
+  --clr-primary-red: 0, 100%, 67%;
+  --clr-primary-yellow: 39, 100%, 56%;
+  --clr-primary-teal: 166, 100%, 37%;
+  --clr-primary-blue: 234, 85%, 45%;
+  --clr-neutral-100: 0, 0%, 100%;
+  --clr-neutral-200: 221, 100%, 96%;
+  --clr-neutral-300: 241, 100%, 89%;
+  --clr-neutral-400: 224, 30%, 27%;
+}
+@media (max-width: 25em) {
+  :root {
+    --fs-100: 1rem;
+    --fs-200: 1.125rem;
+    --fs-300: 1.5rem;
+    --fs-400: 3rem;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-100);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 32rem;
+  border-radius: 2rem;
+  background-color: hsl(var(--clr-neutral-100));
+  box-shadow: 0 1rem 2rem hsla(224, 82%, 58%, 0.15);
+  overflow: hidden;
+}
+@media (max-width: 40em) {
+  .card {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    overflow: visible;
+  }
+}
+.card__main {
+  place-items: center;
+  border-radius: 2rem;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%)), hsl(256, 72%, 46%);
+}
+@media (max-width: 40em) {
+  .card__main {
+    border-radius: 0 0 2rem 2rem;
+  }
+}
+.card__score {
+  display: grid;
+  place-content: center;
+  padding: 0 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+}
+.card__info {
+  align-items: center;
+  background-color: hsl(var(--clr-neutral-100));
+  padding: 2rem;
+}
+.card__details {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.card__item {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.card__item:hover {
+  transform: scale(1.07);
+}
+.card__item.bg-red:hover {
+  box-shadow: 0 0 0.5rem 0.1rem hsla(var(--clr-primary-red), 0.35);
+}
+.card__item.bg-yellow:hover {
+  box-shadow: 0 0 0.5rem 0.1rem hsla(var(--clr-primary-yellow), 0.35);
+}
+.card__item.bg-teal:hover {
+  box-shadow: 0 0 0.5rem 0.1rem hsla(var(--clr-primary-teal), 0.35);
+}
+.card__item.bg-blue:hover {
+  box-shadow: 0 0 0.5rem 0.1rem hsla(var(--clr-primary-blue), 0.35);
+}
+
+.btn {
+  border: none;
+  background: hsl(var(--clr-neutral-400));
+  padding: 1em;
+  border-radius: 8rem;
+  color: hsl(var(--clr-neutral-100));
+  font-size: var(--fs-100);
+  font-weight: var(--fw-200);
+  transition: all 0.5s;
+}
+.btn:hover {
+  transform: translateY(-0.5rem);
+  background: hsl(256, 72%, 46%);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.fs-100 {
+  font-size: var(--fs-100);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fw-100 {
+  font-weight: var(--fw-100);
+}
+.fw-200 {
+  font-weight: var(--fw-200);
+}
+.fw-300 {
+  font-weight: var(--fw-300);
+}
+
+.text-red {
+  color: hsl(var(--clr-primary-red));
+}
+.text-yellow {
+  color: hsl(var(--clr-primary-yellow));
+}
+.text-teal {
+  color: hsl(var(--clr-primary-teal));
+}
+.text-blue {
+  color: hsl(var(--clr-primary-blue));
+}
+.text-neutral {
+  color: hsl(var(--clr-neutral-300));
+}
+.text-white {
+  color: hsl(var(--clr-neutral-100));
+}
+.text-grey {
+  color: hsla(var(--clr-neutral-400), 0.5);
+}
+.text-dark {
+  color: hsl(var(--clr-neutral-400));
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-neutral-100));
+}
+.bg-red {
+  background-color: hsla(var(--clr-primary-red), 0.05);
+}
+.bg-yellow {
+  background-color: hsla(var(--clr-primary-yellow), 0.05);
+}
+.bg-teal {
+  background-color: hsla(var(--clr-primary-teal), 0.05);
+}
+.bg-blue {
+  background-color: hsla(var(--clr-primary-blue), 0.05);
+}
+
+.main-grid {
+  display: grid;
+  grid-row-gap: 3rem;
+  grid-template-columns: minmax(min-content, 46rem);
+  place-content: center;
+  background: #ecf2ff;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}

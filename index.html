@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Playfair+Display:wght@400;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- custom CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+        <title>Frontend Mentor | Results summary component</title>
+    </head>
+    <body class="main-grid">
+        <main class="card">
+            <div class="card__main grid">
+                <h2 class="fs-200 fw-200 text-neutral">Your Result</h2>
+                <div class="card__score">
+                    <span class="fs-400 fw-300 text-white">76</span>
+                    <p class="text-neutral">of 100</p>
+                </div>
+                <p class="fs-300 fw-200 text-white">Great</p>
+                <p class="text-neutral">Your performance exceed 65% of the people conducting the test here!</p>
+            </div>
+
+            <div class="card__info grid">
+                <h3 class="fs-200 fw-300 text-dark">Summary</h3>
+                <ul class="card__details">
+                    <li class="card__item bg-red">
+                        <img src="assets/images/icon-reaction.svg" alt="Reaction icon" />
+                        <p class="text-red">Reaction</p>
+                        <p class="fw-300 text-grey ml-auto"><span class="text-dark">80</span> / 100</p>
+                    </li>
+                    <li class="card__item bg-yellow">
+                        <img src="assets/images/icon-memory.svg" alt="Memory icon" />
+                        <p class="text-yellow">Memory</p>
+                        <p class="fw-300 text-grey ml-auto"><span class="text-dark">92</span> / 100</p>
+                    </li>
+                    <li class="card__item bg-teal">
+                        <img src="assets/images/icon-verbal.svg" alt="Verbal icon" />
+                        <p class="text-teal">Verbal</p>
+                        <p class="fw-300 text-grey ml-auto"><span class="text-dark">61</span> / 100</p>
+                    </li>
+                    <li class="card__item bg-blue">
+                        <img src="assets/images/icon-visual.svg" alt="Visual icon" />
+                        <p class="text-blue">Visual</p>
+                        <p class="fw-300 text-grey ml-auto"><span class="text-dark">73</span> / 100</p>
+                    </li>
+                </ul>
+                <button class="btn">Continue</button>
+            </div>
+        </main>
+
+        <footer style="justify-self: center">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+            <a href="https://www.frontendmentor.io/profile/StefanB993">Stefan Balog</a>.
+        </footer>
+    </body>
+</html>

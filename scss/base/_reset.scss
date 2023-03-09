@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 400;
+}
+
+body {
+    min-height: 100vh;
+}
+
+// html {
+//     @media (max-width:40em) {
+//         font-size: 87.5%;
+//     }
+// }
+
+// img, picture, video, canvas, svg {
+//     display: block;
+//     max-width: 100%;
+//   }
+

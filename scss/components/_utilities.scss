@@ -1,0 +1,96 @@
+//********* Typography *********
+
+// font-size
+.fs {
+    &-100 {
+        font-size: var(--fs-100);
+    }
+    &-200 {
+        font-size: var(--fs-200);
+    }
+    &-300 {
+        font-size: var(--fs-300);
+    }
+    &-400 {
+        font-size: var(--fs-400);
+    }
+}
+
+// font-weight
+.fw {
+    &-100 {
+        font-weight: var(--fw-100);
+    }
+    &-200 {
+        font-weight: var(--fw-200);
+    }
+    &-300 {
+        font-weight: var(--fw-300);
+    }
+}
+
+// font-color
+.text {
+    &-red {
+        color: hsl(var(--clr-primary-red));
+    }
+    &-yellow {
+        color: hsl(var(--clr-primary-yellow));
+    }
+    &-teal {
+        color: hsl(var(--clr-primary-teal));
+    }
+    &-blue {
+        color: hsl(var(--clr-primary-blue));
+    }
+    &-neutral {
+        color: hsl(var(--clr-neutral-300));
+    }
+    &-white {
+        color: hsl(var(--clr-neutral-100));
+    }
+    &-grey {
+        color: hsla(var(--clr-neutral-400), 0.5);
+    }
+    &-dark {
+        color: hsl(var(--clr-neutral-400));
+    }
+}
+
+// background-color
+.bg {
+    &-white {
+        background-color: hsl(var(--clr-neutral-100));
+    }
+    &-red {
+        background-color: hsla(var(--clr-primary-red), 0.05);
+    }
+    &-yellow {
+        background-color: hsla(var(--clr-primary-yellow), 0.05);
+    }
+    &-teal {
+        background-color: hsla(var(--clr-primary-teal), 0.05);
+    }
+    &-blue {
+        background-color: hsla(var(--clr-primary-blue), 0.05);
+    }
+}
+
+// ********* Layout *********
+
+.main-grid {
+    display: grid;
+    grid-row-gap: 3rem;
+    grid-template-columns:minmax(min-content, 46rem);
+    place-content: center;
+    background: #ecf2ff;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.grid {
+    display: grid;
+    gap:var(--gap,1rem);
+}
